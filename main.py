@@ -97,9 +97,11 @@ def dvizh():
                 time[i] = 1
 
 
+###################################################################
 def give_score(point):
-    # print and write to file "out" points
+    # высвечивает табло с баллами
     file = open("out.txt", "a")
+    # имя игрока
     file.write('Name: ' + str(input("Tell your name\n")) + ': ' + str(points) + '\n')
     file.close()
 
@@ -111,7 +113,7 @@ clock = pygame.time.Clock()
 finished = False
 points = 0
 font = pygame.font.Font(None, 50)
-while not finished:  #
+while not finished:
     clock.tick(FPS)  # Пропускаем время и перемещаем шарики
     dvizh()  #
     timer = timer - 20  #
